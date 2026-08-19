@@ -1,21 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucro</title>
     <!-- ======== STYLE =========  -->
-     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Lucro</h1>
     <h2>Track Your Profit</h2>
 
     <!-- ======== INPUT AREA ======== -->
-
-
+    <!-- ========= FORM  ========== -->
+    <div class="form-container" id="form-container">
+      <form action="" class="form-data" id="form-data">
+        <label for="item-name">Item: </label>
+        <input
+          type="text"
+          class="item-name"
+          id="item-name"
+          name="item-name"
+          placeholder="Nama item"
+        />
+        <label for="item-qty">Jumlah: </label>
+        <input
+          type="number"
+          class="item-qty"
+          id="item-qty"
+          name="item-qty"
+          placeholder="Jumlah"
+        />
+        <label for="src">Sumber Pemasukan: </label>
+        <select name="src" class="src" id="src">
+          <option value="online">Online</option>
+          <option value="offline">Offline</option>
+        </select>
+        <label for="date">Tanggal: </label>
+        <input type="date" class="date" id="date" />
+        <label for="note">Catatan: </label>
+        <textarea
+          name="note"
+          id="note"
+          placeholder="Catatan"
+          cols="30"
+          rows="6"
+        ></textarea>
+      </form>
+    </div>
 
     <!-- ========== APP ========== -->
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
