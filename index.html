@@ -14,6 +14,23 @@
     <!-- ======== INPUT AREA ======== -->
     <!-- ========= FORM  ========== -->
     <div class="form-container" id="form-container">
+      <div class="transaction-radio">
+        <h3>Tipe Transaksi:</h3>
+        <input
+          type="radio"
+          id="expense-radio"
+          name="transaction-radio"
+          value="expense"
+        />
+        <label for="expense-radio">Pengeluaran</label><br />
+        <input
+          type="radio"
+          id="income-radio"
+          name="transaction-radio"
+          value="income"
+        />
+        <label for="income-radio">Pemasukan</label><br />
+      </div>
       <form action="" class="form-data" id="form-data">
         <label for="item-name">Item: </label>
         <input
@@ -23,19 +40,27 @@
           name="item-name"
           placeholder="Nama item"
         />
-        <label for="item-qty">Jumlah: </label>
+        <label for="amount">Nominal: </label>
         <input
           type="number"
-          class="item-qty"
-          id="item-qty"
-          name="item-qty"
-          placeholder="Jumlah"
+          class="amount"
+          id="amount"
+          name="amount"
+          placeholder="Nominal"
         />
         <label for="src">Sumber Pemasukan: </label>
         <select name="src" class="src" id="src">
           <option value="online">Online</option>
           <option value="offline">Offline</option>
         </select>
+        <label for="expense-type">Tipe Pengeluaran</label>
+        <select name="expense-type" id="expense-type">
+          <option value="modal">Modal</option>
+          <option value="operasional">Operasional</option>
+          <option value="gaji">Gaji</option>
+          <option value="lain-lain">Lain-lain</option>
+        </select>
+        <br />
         <label for="date">Tanggal: </label>
         <input type="date" class="date" id="date" />
         <label for="note">Catatan: </label>
@@ -46,6 +71,7 @@
           cols="30"
           rows="6"
         ></textarea>
+        <input type="submit" value="Simpan Transaksi"/>
       </form>
     </div>
 
