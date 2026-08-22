@@ -32,14 +32,39 @@
         <label for="income-radio">Pemasukan</label><br />
       </div>
       <form action="" class="form-data" id="form-data">
-        <label for="item-name">Item: </label>
-        <input
-          type="text"
-          class="item-name"
-          id="item-name"
-          name="item-name"
-          placeholder="Nama item"
-        />
+        <div class="income-wrapper" id="income-wrapper">
+          <label for="item-name">Item: </label>
+          <input
+            type="text"
+            class="item-name"
+            id="item-name"
+            name="item-name"
+            placeholder="Nama item"
+          />
+          <label for="item-qty">Qty: </label>
+          <input
+            type="number"
+            class="item-qty"
+            id="item-qty"
+            name="item-qty"
+            placeholder="Qty"
+          />
+          <label for="src">Sumber Pemasukan: </label>
+          <select name="src" class="src" id="src">
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
+        </div>
+        <div class="expense-wrapper" id="expense-wrapper">
+          <label for="expense-type">Tipe Pengeluaran</label>
+          <select name="expense-type" id="expense-type">
+            <option value="modal">Modal</option>
+            <option value="operasional">Operasional</option>
+            <option value="gaji">Gaji</option>
+            <option value="lain-lain">Lain-lain</option>
+          </select>
+        </div>
+
         <label for="amount">Nominal: </label>
         <input
           type="number"
@@ -48,19 +73,7 @@
           name="amount"
           placeholder="Nominal"
         />
-        <label for="src">Sumber Pemasukan: </label>
-        <select name="src" class="src" id="src">
-          <option value="online">Online</option>
-          <option value="offline">Offline</option>
-        </select>
-        <label for="expense-type">Tipe Pengeluaran</label>
-        <select name="expense-type" id="expense-type">
-          <option value="modal">Modal</option>
-          <option value="operasional">Operasional</option>
-          <option value="gaji">Gaji</option>
-          <option value="lain-lain">Lain-lain</option>
-        </select>
-        <br />
+
         <label for="date">Tanggal: </label>
         <input type="date" class="date" id="date" />
         <label for="note">Catatan: </label>
@@ -84,7 +97,7 @@
     <!-- ========= HISTORY SECTION ======== -->
     <div class="history-container" id="history-container">
       <h3>Riwayat Transaksi:</h3>
-      <ul id="history-summary "></ul>
+      <ul id="history-summary"></ul>
     </div>
 
     <!-- ========== APP ========== -->
